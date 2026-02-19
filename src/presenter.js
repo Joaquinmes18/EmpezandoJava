@@ -1,5 +1,6 @@
-import sumar from "./sumador";
+/*import sumar from "./sumador";
 import multiplicar from "./multiplicador";
+
 
 const first = document.querySelector("#primer-numero");
 const second = document.querySelector("#segundo-numero");
@@ -30,4 +31,17 @@ if (formMultiplicar) {
     multiplyResultDiv.innerHTML = multiplicar(firstNumber, secondNumber);
   });
 }
+});*/
+import saludar from "./saludador";
+
+const nombreInput = document.querySelector("#nombre");
+const form = document.querySelector("#saludar-form");
+const div = document.querySelector("#resultado-div");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const nombre = nombreInput.value;
+
+  div.innerHTML = "<p>" + saludar(nombre) + "</p>";
 });
